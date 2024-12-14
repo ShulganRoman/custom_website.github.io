@@ -1,0 +1,109 @@
+:root {
+    --logo-width: 100px;
+    --logo-height: 100px;
+
+    --display-width: calc(100% - 40px);
+
+    --default-padding: 10px;
+
+    --trigger-resize-for-mobile: 1150px;
+}
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+a + p + p, a + p {
+    color: blue;
+}
+
+.header-logo {
+    width: var(--logo-width);
+    height: var(--logo-height);
+}
+
+.header-site-name {
+    width: calc(100% - var(--logo-width));
+    height: 100px;
+    font-size: calc(100px - var(--default-padding) * 2);
+    text-align: center;
+    color: mediumpurple;
+}
+
+header {
+    font-family: courier new, serif;
+    display: flex;
+    width: var(--display-width);
+    height: 100px;
+    padding: var(--default-padding);
+    border: 10px solid white;
+    border-radius: 20px;
+}
+
+@media (max-width: 1150px) {
+    .mobile-ascii {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .mobile-text {
+        font-size: calc(100px - var(--default-padding) * 3);
+    }
+}
+.box {
+    border: 10px solid yellow;
+    padding: var(--default-padding);
+    width: var(--display-width);
+    color: white;
+    border-radius: 15px;
+}
+
+.something::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    border: 5px solid black;
+}
+
+.click:active {
+    color: rebeccapurple;
+    background-color: skyblue;
+}
+
+main {
+    color: cornsilk;
+}
+
+body {
+    background-color: cornsilk;
+}
+
+button.img {
+    border: none;
+    background: url('pictures/logo.svg') no-repeat center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+section {
+    color: white;
+}
+
+.centering {
+    text-align: center;
+}
