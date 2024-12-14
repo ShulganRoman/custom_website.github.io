@@ -1,6 +1,8 @@
 :root {
-    --logo-width: 100px;
-    --logo-height: 100px;
+    --header-height: 300px;
+
+    --logo-width: 150px;
+    --logo-height: 150px;
 
     --display-width: calc(100% - 40px);
 
@@ -26,10 +28,18 @@ a + p + p, a + p {
     color: blue;
 }
 
+
+.logo-size {
+    width: 150px;
+    height: 150px;
+}
+
 .header-logo {
     width: var(--logo-width);
-    height: var(--logo-height);
+    height: var(--header-height);
 }
+
+
 
 .header-site-name {
     width: calc(100% - var(--logo-width));
@@ -40,18 +50,22 @@ a + p + p, a + p {
 }
 
 header {
-    font-family: courier new, serif;
     display: flex;
     width: var(--display-width);
-    height: 100px;
+    height: var(--header-height);
     padding: var(--default-padding);
     border: 10px solid white;
     border-radius: 20px;
 }
 
-@media (max-width: 1150px) {
+/*header div[class="header-logo"] a {*/
+/*    justify-content: center;*/
+/*}*/
+
+
+@media (max-width: 1300px) {
     .mobile-ascii {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 
@@ -60,12 +74,21 @@ header {
         font-size: calc(100px - var(--default-padding) * 3);
     }
 }
+
 .box {
-    border: 10px solid yellow;
+    border: 10px solid rgba(30, 255, 229, 0.28);
     padding: var(--default-padding);
     width: var(--display-width);
     color: white;
-    border-radius: 15px;
+    border-radius: 100px;
+}
+
+.mobile-ascii {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: deepskyblue;
+    backgroud-color: #1EFFE547;
 }
 
 .something::after {
@@ -98,10 +121,6 @@ button.img {
     height: 100px;
     border-radius: 50%;
     padding: 0;
-}
-
-section {
-    color: white;
 }
 
 .centering {
